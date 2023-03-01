@@ -58,6 +58,7 @@ module ControlUnit(output done,
     reg [9:0] operandA;
     reg [9:0] operandB;
     reg [2:0] operationSelect;
+    reg [2:0] reg1Select;
     
     //Register Wires/Regs
     wire [9:0] DoutRd;
@@ -78,7 +79,7 @@ ROM control area
 Just slap instruction into a reg
 
 */
-StrcpyROM InstructionROM(.readData(instruction),
+BubbleSortROM InstructionROM(.readData(instruction),
         .address(instructionAddress)); 
         
         and(done, instruction[9], instruction[8], instruction[7], instruction[6]);
@@ -90,10 +91,10 @@ RAM control area
 */
 wire [9:0] RAMValue;
 reg [9:0] RAMWrite;
-reg [8:0] RAMAddress;//8:0 becasue 0 to 511 is only 9 bits
+reg [9:0] RAMAddress;//8:0 becasue 0 to 511 is only 9 bits
 reg RAMwriteEnable;
 
-StrcpyRAM CPURAM(.readData(RAMValue),
+BubbleSortRAM CPURAM(.readData(RAMValue),
         .writeData(RAMWrite),
         .address(RAMAddress),
         .writeEnable(RAMwriteEnable),
@@ -106,13 +107,13 @@ StrcpyRAM CPURAM(.readData(RAMValue),
             
             //load word (value)
                 4'b0101 : begin
-                            RAMAddress <= DoutRs;
+                            RAMAddress <= DoutRd;
                             RAMwriteEnable <= 1'b0;
                             RAMWrite <= 10'b0000000000;
                           end
             //store word (value)    
                 4'b0110 : begin
-                            RAMAddress <= DoutRs;
+                            RAMAddress <= DoutRd;
                             RAMwriteEnable <= 1'b1;
                             RAMWrite <= DoutRd;
                             //{1'b1, RAMAddress[8:5], instruction[4:0]};
@@ -156,7 +157,7 @@ PC and CCR always enabled and can always be written to, also always output
         .Din(Din),
         .DinCCR({flagRegisterOutput, 9'b000000000}),
         .DinPC(address),
-        .reg1Select(instruction [5:3]),
+        .reg1Select(reg1Select),
         .reg2Select(instruction [2:0]),
         .reset(reset),
         .clk(clk));
@@ -166,7 +167,13 @@ PC and CCR always enabled and can always be written to, also always output
                 4'b0011 : Din <= DoutRd;
                 4'b0101 : Din <= RAMValue;
                 4'b1001 : Din <= {{8{instruction[2]}}, instruction[2:0]};
+                4'b1101 : Din <= {5'b00000, instruction[4:0]};
                 default : Din <= resultWord;
+            endcase
+            
+            case(instruction[9:6])
+                4'b1101 : reg1Select <= {2'b00, instruction[5]};
+                default : reg1Select <= instruction [5:3];
             endcase
         end
     
