@@ -1,0 +1,916 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Tue Feb 28 10:16:17 2023
+| Host         : LAPTOP-6G37NFKC running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -report_unconstrained -file ControlUnit_timing_summary_routed.rpt -pb ControlUnit_timing_summary_routed.pb -rpx ControlUnit_timing_summary_routed.rpx -warn_on_violation
+| Design       : ControlUnit
+| Device       : 7z010i-clg225
+| Speed File   : -1L  PRODUCTION 1.12 2019-11-22
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity          Description                  Violations  
+---------  ----------------  ---------------------------  ----------  
+TIMING-17  Critical Warning  Non-clocked sequential cell  86          
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (86)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (271)
+5. checking no_input_delay (1)
+6. checking no_output_delay (1)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (86)
+-------------------------
+ There are 86 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (271)
+--------------------------------------------------
+ There are 271 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (1)
+------------------------------
+ There is 1 input port with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (1)
+-------------------------------
+ There is 1 port with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+        inf        0.000                      0                  272          inf        0.000                      0                  272           NA           NA                      NA                    NA  
+
+
+There are no user specified timing constraints.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay           272 Endpoints
+Min Delay           272 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 register10bit/PC/Dout_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            register10bit/g5/Dout_reg[9]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        15.900ns  (logic 2.861ns (17.994%)  route 13.039ns (82.006%))
+  Logic Levels:           18  (FDRE=1 LUT2=1 LUT3=9 LUT4=1 LUT5=1 LUT6=4 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y8          FDRE                         0.000     0.000 r  register10bit/PC/Dout_reg[1]/C
+    SLICE_X40Y8          FDRE (Prop_fdre_C_Q)         0.456     0.456 r  register10bit/PC/Dout_reg[1]/Q
+                         net (fo=10, routed)          1.032     1.488    InstructionROM/address[1]
+    SLICE_X39Y7          LUT4 (Prop_lut4_I2_O)        0.124     1.612 r  InstructionROM/readData[0]_INST_0/O
+                         net (fo=23, routed)          1.368     2.980    register10bit/reg2Select[0]
+    SLICE_X34Y7          LUT6 (Prop_lut6_I4_O)        0.124     3.104 f  register10bit/DoutRs[0]_INST_0_i_2/O
+                         net (fo=1, routed)           0.000     3.104    register10bit/DoutRs[0]_INST_0_i_2_n_0
+    SLICE_X34Y7          MUXF7 (Prop_muxf7_I1_O)      0.247     3.351 f  register10bit/DoutRs[0]_INST_0/O
+                         net (fo=2, routed)           0.825     4.176    p_1_in[0]
+    SLICE_X34Y9          LUT6 (Prop_lut6_I2_O)        0.298     4.474 r  alu10bit_i_20/O
+                         net (fo=24, routed)          1.761     6.235    alu10bit/sbit0/B
+    SLICE_X36Y12         LUT2 (Prop_lut2_I0_O)        0.124     6.359 r  alu10bit/sbit0/Cout_INST_0/O
+                         net (fo=2, routed)           0.723     7.082    alu10bit/sbit1/Cin
+    SLICE_X37Y15         LUT3 (Prop_lut3_I0_O)        0.124     7.206 r  alu10bit/sbit1/Cout_INST_0/O
+                         net (fo=2, routed)           0.583     7.789    alu10bit/sbit2/Cin
+    SLICE_X37Y16         LUT3 (Prop_lut3_I0_O)        0.124     7.913 r  alu10bit/sbit2/Cout_INST_0/O
+                         net (fo=2, routed)           0.445     8.358    alu10bit/sbit3/Cin
+    SLICE_X37Y16         LUT3 (Prop_lut3_I0_O)        0.124     8.482 r  alu10bit/sbit3/Cout_INST_0/O
+                         net (fo=2, routed)           0.674     9.156    alu10bit/sbit4/Cin
+    SLICE_X38Y15         LUT3 (Prop_lut3_I0_O)        0.124     9.280 r  alu10bit/sbit4/Cout_INST_0/O
+                         net (fo=2, routed)           0.825    10.105    alu10bit/sbit5/Cin
+    SLICE_X40Y15         LUT3 (Prop_lut3_I0_O)        0.124    10.229 r  alu10bit/sbit5/Cout_INST_0/O
+                         net (fo=2, routed)           0.169    10.398    alu10bit/sbit6/Cin
+    SLICE_X40Y15         LUT3 (Prop_lut3_I0_O)        0.124    10.522 r  alu10bit/sbit6/Cout_INST_0/O
+                         net (fo=2, routed)           0.944    11.465    alu10bit/sbit7/Cin
+    SLICE_X43Y13         LUT3 (Prop_lut3_I0_O)        0.124    11.589 r  alu10bit/sbit7/Cout_INST_0/O
+                         net (fo=2, routed)           0.434    12.024    alu10bit/sbit8/Cin
+    SLICE_X41Y14         LUT3 (Prop_lut3_I0_O)        0.124    12.148 r  alu10bit/sbit8/Cout_INST_0/O
+                         net (fo=1, routed)           0.433    12.581    alu10bit/sbit9/Cin
+    SLICE_X41Y14         LUT3 (Prop_lut3_I0_O)        0.124    12.705 r  alu10bit/sbit9/Sum_INST_0/O
+                         net (fo=1, routed)           0.665    13.370    alu10bit/subtractionResult_9
+    SLICE_X41Y14         LUT5 (Prop_lut5_I0_O)        0.124    13.494 r  alu10bit/resultWord[9]_INST_0_i_3/O
+                         net (fo=1, routed)           0.409    13.903    alu10bit/resultWord[9]_INST_0_i_3_n_0
+    SLICE_X41Y12         LUT6 (Prop_lut6_I2_O)        0.124    14.027 r  alu10bit/resultWord[9]_INST_0/O
+                         net (fo=1, routed)           0.978    15.005    resultWord[9]
+    SLICE_X39Y10         LUT6 (Prop_lut6_I2_O)        0.124    15.129 r  register10bit_i_1/O
+                         net (fo=8, routed)           0.771    15.900    register10bit/g5/Din[9]
+    SLICE_X40Y9          FDRE                                         r  register10bit/g5/Dout_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 register10bit/PC/Dout_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            register10bit/g4/Dout_reg[9]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        15.897ns  (logic 2.861ns (17.997%)  route 13.036ns (82.003%))
+  Logic Levels:           18  (FDRE=1 LUT2=1 LUT3=9 LUT4=1 LUT5=1 LUT6=4 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y8          FDRE                         0.000     0.000 r  register10bit/PC/Dout_reg[1]/C
+    SLICE_X40Y8          FDRE (Prop_fdre_C_Q)         0.456     0.456 r  register10bit/PC/Dout_reg[1]/Q
+                         net (fo=10, routed)          1.032     1.488    InstructionROM/address[1]
+    SLICE_X39Y7          LUT4 (Prop_lut4_I2_O)        0.124     1.612 r  InstructionROM/readData[0]_INST_0/O
+                         net (fo=23, routed)          1.368     2.980    register10bit/reg2Select[0]
+    SLICE_X34Y7          LUT6 (Prop_lut6_I4_O)        0.124     3.104 f  register10bit/DoutRs[0]_INST_0_i_2/O
+                         net (fo=1, routed)           0.000     3.104    register10bit/DoutRs[0]_INST_0_i_2_n_0
+    SLICE_X34Y7          MUXF7 (Prop_muxf7_I1_O)      0.247     3.351 f  register10bit/DoutRs[0]_INST_0/O
+                         net (fo=2, routed)           0.825     4.176    p_1_in[0]
+    SLICE_X34Y9          LUT6 (Prop_lut6_I2_O)        0.298     4.474 r  alu10bit_i_20/O
+                         net (fo=24, routed)          1.761     6.235    alu10bit/sbit0/B
+    SLICE_X36Y12         LUT2 (Prop_lut2_I0_O)        0.124     6.359 r  alu10bit/sbit0/Cout_INST_0/O
+                         net (fo=2, routed)           0.723     7.082    alu10bit/sbit1/Cin
+    SLICE_X37Y15         LUT3 (Prop_lut3_I0_O)        0.124     7.206 r  alu10bit/sbit1/Cout_INST_0/O
+                         net (fo=2, routed)           0.583     7.789    alu10bit/sbit2/Cin
+    SLICE_X37Y16         LUT3 (Prop_lut3_I0_O)        0.124     7.913 r  alu10bit/sbit2/Cout_INST_0/O
+                         net (fo=2, routed)           0.445     8.358    alu10bit/sbit3/Cin
+    SLICE_X37Y16         LUT3 (Prop_lut3_I0_O)        0.124     8.482 r  alu10bit/sbit3/Cout_INST_0/O
+                         net (fo=2, routed)           0.674     9.156    alu10bit/sbit4/Cin
+    SLICE_X38Y15         LUT3 (Prop_lut3_I0_O)        0.124     9.280 r  alu10bit/sbit4/Cout_INST_0/O
+                         net (fo=2, routed)           0.825    10.105    alu10bit/sbit5/Cin
+    SLICE_X40Y15         LUT3 (Prop_lut3_I0_O)        0.124    10.229 r  alu10bit/sbit5/Cout_INST_0/O
+                         net (fo=2, routed)           0.169    10.398    alu10bit/sbit6/Cin
+    SLICE_X40Y15         LUT3 (Prop_lut3_I0_O)        0.124    10.522 r  alu10bit/sbit6/Cout_INST_0/O
+                         net (fo=2, routed)           0.944    11.465    alu10bit/sbit7/Cin
+    SLICE_X43Y13         LUT3 (Prop_lut3_I0_O)        0.124    11.589 r  alu10bit/sbit7/Cout_INST_0/O
+                         net (fo=2, routed)           0.434    12.024    alu10bit/sbit8/Cin
+    SLICE_X41Y14         LUT3 (Prop_lut3_I0_O)        0.124    12.148 r  alu10bit/sbit8/Cout_INST_0/O
+                         net (fo=1, routed)           0.433    12.581    alu10bit/sbit9/Cin
+    SLICE_X41Y14         LUT3 (Prop_lut3_I0_O)        0.124    12.705 r  alu10bit/sbit9/Sum_INST_0/O
+                         net (fo=1, routed)           0.665    13.370    alu10bit/subtractionResult_9
+    SLICE_X41Y14         LUT5 (Prop_lut5_I0_O)        0.124    13.494 r  alu10bit/resultWord[9]_INST_0_i_3/O
+                         net (fo=1, routed)           0.409    13.903    alu10bit/resultWord[9]_INST_0_i_3_n_0
+    SLICE_X41Y12         LUT6 (Prop_lut6_I2_O)        0.124    14.027 r  alu10bit/resultWord[9]_INST_0/O
+                         net (fo=1, routed)           0.978    15.005    resultWord[9]
+    SLICE_X39Y10         LUT6 (Prop_lut6_I2_O)        0.124    15.129 r  register10bit_i_1/O
+                         net (fo=8, routed)           0.768    15.897    register10bit/g4/Din[9]
+    SLICE_X41Y8          FDRE                                         r  register10bit/g4/Dout_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 register10bit/PC/Dout_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            register10bit/g2/Dout_reg[9]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        15.876ns  (logic 2.861ns (18.021%)  route 13.015ns (81.979%))
+  Logic Levels:           18  (FDRE=1 LUT2=1 LUT3=9 LUT4=1 LUT5=1 LUT6=4 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y8          FDRE                         0.000     0.000 r  register10bit/PC/Dout_reg[1]/C
+    SLICE_X40Y8          FDRE (Prop_fdre_C_Q)         0.456     0.456 r  register10bit/PC/Dout_reg[1]/Q
+                         net (fo=10, routed)          1.032     1.488    InstructionROM/address[1]
+    SLICE_X39Y7          LUT4 (Prop_lut4_I2_O)        0.124     1.612 r  InstructionROM/readData[0]_INST_0/O
+                         net (fo=23, routed)          1.368     2.980    register10bit/reg2Select[0]
+    SLICE_X34Y7          LUT6 (Prop_lut6_I4_O)        0.124     3.104 f  register10bit/DoutRs[0]_INST_0_i_2/O
+                         net (fo=1, routed)           0.000     3.104    register10bit/DoutRs[0]_INST_0_i_2_n_0
+    SLICE_X34Y7          MUXF7 (Prop_muxf7_I1_O)      0.247     3.351 f  register10bit/DoutRs[0]_INST_0/O
+                         net (fo=2, routed)           0.825     4.176    p_1_in[0]
+    SLICE_X34Y9          LUT6 (Prop_lut6_I2_O)        0.298     4.474 r  alu10bit_i_20/O
+                         net (fo=24, routed)          1.761     6.235    alu10bit/sbit0/B
+    SLICE_X36Y12         LUT2 (Prop_lut2_I0_O)        0.124     6.359 r  alu10bit/sbit0/Cout_INST_0/O
+                         net (fo=2, routed)           0.723     7.082    alu10bit/sbit1/Cin
+    SLICE_X37Y15         LUT3 (Prop_lut3_I0_O)        0.124     7.206 r  alu10bit/sbit1/Cout_INST_0/O
+                         net (fo=2, routed)           0.583     7.789    alu10bit/sbit2/Cin
+    SLICE_X37Y16         LUT3 (Prop_lut3_I0_O)        0.124     7.913 r  alu10bit/sbit2/Cout_INST_0/O
+                         net (fo=2, routed)           0.445     8.358    alu10bit/sbit3/Cin
+    SLICE_X37Y16         LUT3 (Prop_lut3_I0_O)        0.124     8.482 r  alu10bit/sbit3/Cout_INST_0/O
+                         net (fo=2, routed)           0.674     9.156    alu10bit/sbit4/Cin
+    SLICE_X38Y15         LUT3 (Prop_lut3_I0_O)        0.124     9.280 r  alu10bit/sbit4/Cout_INST_0/O
+                         net (fo=2, routed)           0.825    10.105    alu10bit/sbit5/Cin
+    SLICE_X40Y15         LUT3 (Prop_lut3_I0_O)        0.124    10.229 r  alu10bit/sbit5/Cout_INST_0/O
+                         net (fo=2, routed)           0.169    10.398    alu10bit/sbit6/Cin
+    SLICE_X40Y15         LUT3 (Prop_lut3_I0_O)        0.124    10.522 r  alu10bit/sbit6/Cout_INST_0/O
+                         net (fo=2, routed)           0.944    11.465    alu10bit/sbit7/Cin
+    SLICE_X43Y13         LUT3 (Prop_lut3_I0_O)        0.124    11.589 r  alu10bit/sbit7/Cout_INST_0/O
+                         net (fo=2, routed)           0.434    12.024    alu10bit/sbit8/Cin
+    SLICE_X41Y14         LUT3 (Prop_lut3_I0_O)        0.124    12.148 r  alu10bit/sbit8/Cout_INST_0/O
+                         net (fo=1, routed)           0.433    12.581    alu10bit/sbit9/Cin
+    SLICE_X41Y14         LUT3 (Prop_lut3_I0_O)        0.124    12.705 r  alu10bit/sbit9/Sum_INST_0/O
+                         net (fo=1, routed)           0.665    13.370    alu10bit/subtractionResult_9
+    SLICE_X41Y14         LUT5 (Prop_lut5_I0_O)        0.124    13.494 r  alu10bit/resultWord[9]_INST_0_i_3/O
+                         net (fo=1, routed)           0.409    13.903    alu10bit/resultWord[9]_INST_0_i_3_n_0
+    SLICE_X41Y12         LUT6 (Prop_lut6_I2_O)        0.124    14.027 r  alu10bit/resultWord[9]_INST_0/O
+                         net (fo=1, routed)           0.978    15.005    resultWord[9]
+    SLICE_X39Y10         LUT6 (Prop_lut6_I2_O)        0.124    15.129 r  register10bit_i_1/O
+                         net (fo=8, routed)           0.748    15.876    register10bit/g2/Din[9]
+    SLICE_X38Y9          FDRE                                         r  register10bit/g2/Dout_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 register10bit/PC/Dout_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            register10bit/g3/Dout_reg[9]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        15.876ns  (logic 2.861ns (18.021%)  route 13.015ns (81.979%))
+  Logic Levels:           18  (FDRE=1 LUT2=1 LUT3=9 LUT4=1 LUT5=1 LUT6=4 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y8          FDRE                         0.000     0.000 r  register10bit/PC/Dout_reg[1]/C
+    SLICE_X40Y8          FDRE (Prop_fdre_C_Q)         0.456     0.456 r  register10bit/PC/Dout_reg[1]/Q
+                         net (fo=10, routed)          1.032     1.488    InstructionROM/address[1]
+    SLICE_X39Y7          LUT4 (Prop_lut4_I2_O)        0.124     1.612 r  InstructionROM/readData[0]_INST_0/O
+                         net (fo=23, routed)          1.368     2.980    register10bit/reg2Select[0]
+    SLICE_X34Y7          LUT6 (Prop_lut6_I4_O)        0.124     3.104 f  register10bit/DoutRs[0]_INST_0_i_2/O
+                         net (fo=1, routed)           0.000     3.104    register10bit/DoutRs[0]_INST_0_i_2_n_0
+    SLICE_X34Y7          MUXF7 (Prop_muxf7_I1_O)      0.247     3.351 f  register10bit/DoutRs[0]_INST_0/O
+                         net (fo=2, routed)           0.825     4.176    p_1_in[0]
+    SLICE_X34Y9          LUT6 (Prop_lut6_I2_O)        0.298     4.474 r  alu10bit_i_20/O
+                         net (fo=24, routed)          1.761     6.235    alu10bit/sbit0/B
+    SLICE_X36Y12         LUT2 (Prop_lut2_I0_O)        0.124     6.359 r  alu10bit/sbit0/Cout_INST_0/O
+                         net (fo=2, routed)           0.723     7.082    alu10bit/sbit1/Cin
+    SLICE_X37Y15         LUT3 (Prop_lut3_I0_O)        0.124     7.206 r  alu10bit/sbit1/Cout_INST_0/O
+                         net (fo=2, routed)           0.583     7.789    alu10bit/sbit2/Cin
+    SLICE_X37Y16         LUT3 (Prop_lut3_I0_O)        0.124     7.913 r  alu10bit/sbit2/Cout_INST_0/O
+                         net (fo=2, routed)           0.445     8.358    alu10bit/sbit3/Cin
+    SLICE_X37Y16         LUT3 (Prop_lut3_I0_O)        0.124     8.482 r  alu10bit/sbit3/Cout_INST_0/O
+                         net (fo=2, routed)           0.674     9.156    alu10bit/sbit4/Cin
+    SLICE_X38Y15         LUT3 (Prop_lut3_I0_O)        0.124     9.280 r  alu10bit/sbit4/Cout_INST_0/O
+                         net (fo=2, routed)           0.825    10.105    alu10bit/sbit5/Cin
+    SLICE_X40Y15         LUT3 (Prop_lut3_I0_O)        0.124    10.229 r  alu10bit/sbit5/Cout_INST_0/O
+                         net (fo=2, routed)           0.169    10.398    alu10bit/sbit6/Cin
+    SLICE_X40Y15         LUT3 (Prop_lut3_I0_O)        0.124    10.522 r  alu10bit/sbit6/Cout_INST_0/O
+                         net (fo=2, routed)           0.944    11.465    alu10bit/sbit7/Cin
+    SLICE_X43Y13         LUT3 (Prop_lut3_I0_O)        0.124    11.589 r  alu10bit/sbit7/Cout_INST_0/O
+                         net (fo=2, routed)           0.434    12.024    alu10bit/sbit8/Cin
+    SLICE_X41Y14         LUT3 (Prop_lut3_I0_O)        0.124    12.148 r  alu10bit/sbit8/Cout_INST_0/O
+                         net (fo=1, routed)           0.433    12.581    alu10bit/sbit9/Cin
+    SLICE_X41Y14         LUT3 (Prop_lut3_I0_O)        0.124    12.705 r  alu10bit/sbit9/Sum_INST_0/O
+                         net (fo=1, routed)           0.665    13.370    alu10bit/subtractionResult_9
+    SLICE_X41Y14         LUT5 (Prop_lut5_I0_O)        0.124    13.494 r  alu10bit/resultWord[9]_INST_0_i_3/O
+                         net (fo=1, routed)           0.409    13.903    alu10bit/resultWord[9]_INST_0_i_3_n_0
+    SLICE_X41Y12         LUT6 (Prop_lut6_I2_O)        0.124    14.027 r  alu10bit/resultWord[9]_INST_0/O
+                         net (fo=1, routed)           0.978    15.005    resultWord[9]
+    SLICE_X39Y10         LUT6 (Prop_lut6_I2_O)        0.124    15.129 r  register10bit_i_1/O
+                         net (fo=8, routed)           0.748    15.876    register10bit/g3/Din[9]
+    SLICE_X39Y9          FDRE                                         r  register10bit/g3/Dout_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 register10bit/PC/Dout_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            register10bit/i0/Dout_reg[9]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        15.757ns  (logic 2.861ns (18.157%)  route 12.896ns (81.843%))
+  Logic Levels:           18  (FDRE=1 LUT2=1 LUT3=9 LUT4=1 LUT5=1 LUT6=4 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y8          FDRE                         0.000     0.000 r  register10bit/PC/Dout_reg[1]/C
+    SLICE_X40Y8          FDRE (Prop_fdre_C_Q)         0.456     0.456 r  register10bit/PC/Dout_reg[1]/Q
+                         net (fo=10, routed)          1.032     1.488    InstructionROM/address[1]
+    SLICE_X39Y7          LUT4 (Prop_lut4_I2_O)        0.124     1.612 r  InstructionROM/readData[0]_INST_0/O
+                         net (fo=23, routed)          1.368     2.980    register10bit/reg2Select[0]
+    SLICE_X34Y7          LUT6 (Prop_lut6_I4_O)        0.124     3.104 f  register10bit/DoutRs[0]_INST_0_i_2/O
+                         net (fo=1, routed)           0.000     3.104    register10bit/DoutRs[0]_INST_0_i_2_n_0
+    SLICE_X34Y7          MUXF7 (Prop_muxf7_I1_O)      0.247     3.351 f  register10bit/DoutRs[0]_INST_0/O
+                         net (fo=2, routed)           0.825     4.176    p_1_in[0]
+    SLICE_X34Y9          LUT6 (Prop_lut6_I2_O)        0.298     4.474 r  alu10bit_i_20/O
+                         net (fo=24, routed)          1.761     6.235    alu10bit/sbit0/B
+    SLICE_X36Y12         LUT2 (Prop_lut2_I0_O)        0.124     6.359 r  alu10bit/sbit0/Cout_INST_0/O
+                         net (fo=2, routed)           0.723     7.082    alu10bit/sbit1/Cin
+    SLICE_X37Y15         LUT3 (Prop_lut3_I0_O)        0.124     7.206 r  alu10bit/sbit1/Cout_INST_0/O
+                         net (fo=2, routed)           0.583     7.789    alu10bit/sbit2/Cin
+    SLICE_X37Y16         LUT3 (Prop_lut3_I0_O)        0.124     7.913 r  alu10bit/sbit2/Cout_INST_0/O
+                         net (fo=2, routed)           0.445     8.358    alu10bit/sbit3/Cin
+    SLICE_X37Y16         LUT3 (Prop_lut3_I0_O)        0.124     8.482 r  alu10bit/sbit3/Cout_INST_0/O
+                         net (fo=2, routed)           0.674     9.156    alu10bit/sbit4/Cin
+    SLICE_X38Y15         LUT3 (Prop_lut3_I0_O)        0.124     9.280 r  alu10bit/sbit4/Cout_INST_0/O
+                         net (fo=2, routed)           0.825    10.105    alu10bit/sbit5/Cin
+    SLICE_X40Y15         LUT3 (Prop_lut3_I0_O)        0.124    10.229 r  alu10bit/sbit5/Cout_INST_0/O
+                         net (fo=2, routed)           0.169    10.398    alu10bit/sbit6/Cin
+    SLICE_X40Y15         LUT3 (Prop_lut3_I0_O)        0.124    10.522 r  alu10bit/sbit6/Cout_INST_0/O
+                         net (fo=2, routed)           0.944    11.465    alu10bit/sbit7/Cin
+    SLICE_X43Y13         LUT3 (Prop_lut3_I0_O)        0.124    11.589 r  alu10bit/sbit7/Cout_INST_0/O
+                         net (fo=2, routed)           0.434    12.024    alu10bit/sbit8/Cin
+    SLICE_X41Y14         LUT3 (Prop_lut3_I0_O)        0.124    12.148 r  alu10bit/sbit8/Cout_INST_0/O
+                         net (fo=1, routed)           0.433    12.581    alu10bit/sbit9/Cin
+    SLICE_X41Y14         LUT3 (Prop_lut3_I0_O)        0.124    12.705 r  alu10bit/sbit9/Sum_INST_0/O
+                         net (fo=1, routed)           0.665    13.370    alu10bit/subtractionResult_9
+    SLICE_X41Y14         LUT5 (Prop_lut5_I0_O)        0.124    13.494 r  alu10bit/resultWord[9]_INST_0_i_3/O
+                         net (fo=1, routed)           0.409    13.903    alu10bit/resultWord[9]_INST_0_i_3_n_0
+    SLICE_X41Y12         LUT6 (Prop_lut6_I2_O)        0.124    14.027 r  alu10bit/resultWord[9]_INST_0/O
+                         net (fo=1, routed)           0.978    15.005    resultWord[9]
+    SLICE_X39Y10         LUT6 (Prop_lut6_I2_O)        0.124    15.129 r  register10bit_i_1/O
+                         net (fo=8, routed)           0.628    15.757    register10bit/i0/Din[9]
+    SLICE_X41Y10         FDRE                                         r  register10bit/i0/Dout_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 register10bit/PC/Dout_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            register10bit/i1/Dout_reg[9]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        15.750ns  (logic 2.861ns (18.165%)  route 12.889ns (81.835%))
+  Logic Levels:           18  (FDRE=1 LUT2=1 LUT3=9 LUT4=1 LUT5=1 LUT6=4 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y8          FDRE                         0.000     0.000 r  register10bit/PC/Dout_reg[1]/C
+    SLICE_X40Y8          FDRE (Prop_fdre_C_Q)         0.456     0.456 r  register10bit/PC/Dout_reg[1]/Q
+                         net (fo=10, routed)          1.032     1.488    InstructionROM/address[1]
+    SLICE_X39Y7          LUT4 (Prop_lut4_I2_O)        0.124     1.612 r  InstructionROM/readData[0]_INST_0/O
+                         net (fo=23, routed)          1.368     2.980    register10bit/reg2Select[0]
+    SLICE_X34Y7          LUT6 (Prop_lut6_I4_O)        0.124     3.104 f  register10bit/DoutRs[0]_INST_0_i_2/O
+                         net (fo=1, routed)           0.000     3.104    register10bit/DoutRs[0]_INST_0_i_2_n_0
+    SLICE_X34Y7          MUXF7 (Prop_muxf7_I1_O)      0.247     3.351 f  register10bit/DoutRs[0]_INST_0/O
+                         net (fo=2, routed)           0.825     4.176    p_1_in[0]
+    SLICE_X34Y9          LUT6 (Prop_lut6_I2_O)        0.298     4.474 r  alu10bit_i_20/O
+                         net (fo=24, routed)          1.761     6.235    alu10bit/sbit0/B
+    SLICE_X36Y12         LUT2 (Prop_lut2_I0_O)        0.124     6.359 r  alu10bit/sbit0/Cout_INST_0/O
+                         net (fo=2, routed)           0.723     7.082    alu10bit/sbit1/Cin
+    SLICE_X37Y15         LUT3 (Prop_lut3_I0_O)        0.124     7.206 r  alu10bit/sbit1/Cout_INST_0/O
+                         net (fo=2, routed)           0.583     7.789    alu10bit/sbit2/Cin
+    SLICE_X37Y16         LUT3 (Prop_lut3_I0_O)        0.124     7.913 r  alu10bit/sbit2/Cout_INST_0/O
+                         net (fo=2, routed)           0.445     8.358    alu10bit/sbit3/Cin
+    SLICE_X37Y16         LUT3 (Prop_lut3_I0_O)        0.124     8.482 r  alu10bit/sbit3/Cout_INST_0/O
+                         net (fo=2, routed)           0.674     9.156    alu10bit/sbit4/Cin
+    SLICE_X38Y15         LUT3 (Prop_lut3_I0_O)        0.124     9.280 r  alu10bit/sbit4/Cout_INST_0/O
+                         net (fo=2, routed)           0.825    10.105    alu10bit/sbit5/Cin
+    SLICE_X40Y15         LUT3 (Prop_lut3_I0_O)        0.124    10.229 r  alu10bit/sbit5/Cout_INST_0/O
+                         net (fo=2, routed)           0.169    10.398    alu10bit/sbit6/Cin
+    SLICE_X40Y15         LUT3 (Prop_lut3_I0_O)        0.124    10.522 r  alu10bit/sbit6/Cout_INST_0/O
+                         net (fo=2, routed)           0.944    11.465    alu10bit/sbit7/Cin
+    SLICE_X43Y13         LUT3 (Prop_lut3_I0_O)        0.124    11.589 r  alu10bit/sbit7/Cout_INST_0/O
+                         net (fo=2, routed)           0.434    12.024    alu10bit/sbit8/Cin
+    SLICE_X41Y14         LUT3 (Prop_lut3_I0_O)        0.124    12.148 r  alu10bit/sbit8/Cout_INST_0/O
+                         net (fo=1, routed)           0.433    12.581    alu10bit/sbit9/Cin
+    SLICE_X41Y14         LUT3 (Prop_lut3_I0_O)        0.124    12.705 r  alu10bit/sbit9/Sum_INST_0/O
+                         net (fo=1, routed)           0.665    13.370    alu10bit/subtractionResult_9
+    SLICE_X41Y14         LUT5 (Prop_lut5_I0_O)        0.124    13.494 r  alu10bit/resultWord[9]_INST_0_i_3/O
+                         net (fo=1, routed)           0.409    13.903    alu10bit/resultWord[9]_INST_0_i_3_n_0
+    SLICE_X41Y12         LUT6 (Prop_lut6_I2_O)        0.124    14.027 r  alu10bit/resultWord[9]_INST_0/O
+                         net (fo=1, routed)           0.978    15.005    resultWord[9]
+    SLICE_X39Y10         LUT6 (Prop_lut6_I2_O)        0.124    15.129 r  register10bit_i_1/O
+                         net (fo=8, routed)           0.622    15.750    register10bit/i1/Din[9]
+    SLICE_X41Y9          FDRE                                         r  register10bit/i1/Dout_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 register10bit/PC/Dout_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            register10bit/g0/Dout_reg[9]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        15.589ns  (logic 2.861ns (18.352%)  route 12.728ns (81.648%))
+  Logic Levels:           18  (FDRE=1 LUT2=1 LUT3=9 LUT4=1 LUT5=1 LUT6=4 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y8          FDRE                         0.000     0.000 r  register10bit/PC/Dout_reg[1]/C
+    SLICE_X40Y8          FDRE (Prop_fdre_C_Q)         0.456     0.456 r  register10bit/PC/Dout_reg[1]/Q
+                         net (fo=10, routed)          1.032     1.488    InstructionROM/address[1]
+    SLICE_X39Y7          LUT4 (Prop_lut4_I2_O)        0.124     1.612 r  InstructionROM/readData[0]_INST_0/O
+                         net (fo=23, routed)          1.368     2.980    register10bit/reg2Select[0]
+    SLICE_X34Y7          LUT6 (Prop_lut6_I4_O)        0.124     3.104 f  register10bit/DoutRs[0]_INST_0_i_2/O
+                         net (fo=1, routed)           0.000     3.104    register10bit/DoutRs[0]_INST_0_i_2_n_0
+    SLICE_X34Y7          MUXF7 (Prop_muxf7_I1_O)      0.247     3.351 f  register10bit/DoutRs[0]_INST_0/O
+                         net (fo=2, routed)           0.825     4.176    p_1_in[0]
+    SLICE_X34Y9          LUT6 (Prop_lut6_I2_O)        0.298     4.474 r  alu10bit_i_20/O
+                         net (fo=24, routed)          1.761     6.235    alu10bit/sbit0/B
+    SLICE_X36Y12         LUT2 (Prop_lut2_I0_O)        0.124     6.359 r  alu10bit/sbit0/Cout_INST_0/O
+                         net (fo=2, routed)           0.723     7.082    alu10bit/sbit1/Cin
+    SLICE_X37Y15         LUT3 (Prop_lut3_I0_O)        0.124     7.206 r  alu10bit/sbit1/Cout_INST_0/O
+                         net (fo=2, routed)           0.583     7.789    alu10bit/sbit2/Cin
+    SLICE_X37Y16         LUT3 (Prop_lut3_I0_O)        0.124     7.913 r  alu10bit/sbit2/Cout_INST_0/O
+                         net (fo=2, routed)           0.445     8.358    alu10bit/sbit3/Cin
+    SLICE_X37Y16         LUT3 (Prop_lut3_I0_O)        0.124     8.482 r  alu10bit/sbit3/Cout_INST_0/O
+                         net (fo=2, routed)           0.674     9.156    alu10bit/sbit4/Cin
+    SLICE_X38Y15         LUT3 (Prop_lut3_I0_O)        0.124     9.280 r  alu10bit/sbit4/Cout_INST_0/O
+                         net (fo=2, routed)           0.825    10.105    alu10bit/sbit5/Cin
+    SLICE_X40Y15         LUT3 (Prop_lut3_I0_O)        0.124    10.229 r  alu10bit/sbit5/Cout_INST_0/O
+                         net (fo=2, routed)           0.169    10.398    alu10bit/sbit6/Cin
+    SLICE_X40Y15         LUT3 (Prop_lut3_I0_O)        0.124    10.522 r  alu10bit/sbit6/Cout_INST_0/O
+                         net (fo=2, routed)           0.944    11.465    alu10bit/sbit7/Cin
+    SLICE_X43Y13         LUT3 (Prop_lut3_I0_O)        0.124    11.589 r  alu10bit/sbit7/Cout_INST_0/O
+                         net (fo=2, routed)           0.434    12.024    alu10bit/sbit8/Cin
+    SLICE_X41Y14         LUT3 (Prop_lut3_I0_O)        0.124    12.148 r  alu10bit/sbit8/Cout_INST_0/O
+                         net (fo=1, routed)           0.433    12.581    alu10bit/sbit9/Cin
+    SLICE_X41Y14         LUT3 (Prop_lut3_I0_O)        0.124    12.705 r  alu10bit/sbit9/Sum_INST_0/O
+                         net (fo=1, routed)           0.665    13.370    alu10bit/subtractionResult_9
+    SLICE_X41Y14         LUT5 (Prop_lut5_I0_O)        0.124    13.494 r  alu10bit/resultWord[9]_INST_0_i_3/O
+                         net (fo=1, routed)           0.409    13.903    alu10bit/resultWord[9]_INST_0_i_3_n_0
+    SLICE_X41Y12         LUT6 (Prop_lut6_I2_O)        0.124    14.027 r  alu10bit/resultWord[9]_INST_0/O
+                         net (fo=1, routed)           0.978    15.005    resultWord[9]
+    SLICE_X39Y10         LUT6 (Prop_lut6_I2_O)        0.124    15.129 r  register10bit_i_1/O
+                         net (fo=8, routed)           0.461    15.589    register10bit/g0/Din[9]
+    SLICE_X38Y10         FDRE                                         r  register10bit/g0/Dout_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 register10bit/PC/Dout_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            register10bit/i0/Dout_reg[8]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        15.577ns  (logic 2.737ns (17.571%)  route 12.840ns (82.429%))
+  Logic Levels:           17  (FDRE=1 LUT2=1 LUT3=8 LUT4=1 LUT6=5 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y8          FDRE                         0.000     0.000 r  register10bit/PC/Dout_reg[1]/C
+    SLICE_X40Y8          FDRE (Prop_fdre_C_Q)         0.456     0.456 r  register10bit/PC/Dout_reg[1]/Q
+                         net (fo=10, routed)          1.032     1.488    InstructionROM/address[1]
+    SLICE_X39Y7          LUT4 (Prop_lut4_I2_O)        0.124     1.612 r  InstructionROM/readData[0]_INST_0/O
+                         net (fo=23, routed)          1.368     2.980    register10bit/reg2Select[0]
+    SLICE_X34Y7          LUT6 (Prop_lut6_I4_O)        0.124     3.104 f  register10bit/DoutRs[0]_INST_0_i_2/O
+                         net (fo=1, routed)           0.000     3.104    register10bit/DoutRs[0]_INST_0_i_2_n_0
+    SLICE_X34Y7          MUXF7 (Prop_muxf7_I1_O)      0.247     3.351 f  register10bit/DoutRs[0]_INST_0/O
+                         net (fo=2, routed)           0.825     4.176    p_1_in[0]
+    SLICE_X34Y9          LUT6 (Prop_lut6_I2_O)        0.298     4.474 r  alu10bit_i_20/O
+                         net (fo=24, routed)          1.761     6.235    alu10bit/sbit0/B
+    SLICE_X36Y12         LUT2 (Prop_lut2_I0_O)        0.124     6.359 r  alu10bit/sbit0/Cout_INST_0/O
+                         net (fo=2, routed)           0.723     7.082    alu10bit/sbit1/Cin
+    SLICE_X37Y15         LUT3 (Prop_lut3_I0_O)        0.124     7.206 r  alu10bit/sbit1/Cout_INST_0/O
+                         net (fo=2, routed)           0.583     7.789    alu10bit/sbit2/Cin
+    SLICE_X37Y16         LUT3 (Prop_lut3_I0_O)        0.124     7.913 r  alu10bit/sbit2/Cout_INST_0/O
+                         net (fo=2, routed)           0.445     8.358    alu10bit/sbit3/Cin
+    SLICE_X37Y16         LUT3 (Prop_lut3_I0_O)        0.124     8.482 r  alu10bit/sbit3/Cout_INST_0/O
+                         net (fo=2, routed)           0.674     9.156    alu10bit/sbit4/Cin
+    SLICE_X38Y15         LUT3 (Prop_lut3_I0_O)        0.124     9.280 r  alu10bit/sbit4/Cout_INST_0/O
+                         net (fo=2, routed)           0.825    10.105    alu10bit/sbit5/Cin
+    SLICE_X40Y15         LUT3 (Prop_lut3_I0_O)        0.124    10.229 r  alu10bit/sbit5/Cout_INST_0/O
+                         net (fo=2, routed)           0.169    10.398    alu10bit/sbit6/Cin
+    SLICE_X40Y15         LUT3 (Prop_lut3_I0_O)        0.124    10.522 r  alu10bit/sbit6/Cout_INST_0/O
+                         net (fo=2, routed)           0.944    11.465    alu10bit/sbit7/Cin
+    SLICE_X43Y13         LUT3 (Prop_lut3_I0_O)        0.124    11.589 r  alu10bit/sbit7/Cout_INST_0/O
+                         net (fo=2, routed)           0.677    12.266    alu10bit/sbit8/Cin
+    SLICE_X43Y13         LUT3 (Prop_lut3_I0_O)        0.124    12.390 r  alu10bit/sbit8/Sum_INST_0/O
+                         net (fo=1, routed)           0.899    13.289    alu10bit/subtractionResult_8
+    SLICE_X42Y12         LUT6 (Prop_lut6_I4_O)        0.124    13.413 r  alu10bit/resultWord[8]_INST_0_i_6/O
+                         net (fo=1, routed)           0.452    13.865    alu10bit/resultWord[8]_INST_0_i_6_n_0
+    SLICE_X42Y12         LUT6 (Prop_lut6_I5_O)        0.124    13.989 r  alu10bit/resultWord[8]_INST_0/O
+                         net (fo=1, routed)           0.729    14.718    resultWord[8]
+    SLICE_X39Y10         LUT6 (Prop_lut6_I2_O)        0.124    14.842 r  register10bit_i_2/O
+                         net (fo=8, routed)           0.735    15.577    register10bit/i0/Din[8]
+    SLICE_X37Y9          FDRE                                         r  register10bit/i0/Dout_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 register10bit/PC/Dout_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            register10bit/g5/Dout_reg[8]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        15.576ns  (logic 2.737ns (17.572%)  route 12.839ns (82.428%))
+  Logic Levels:           17  (FDRE=1 LUT2=1 LUT3=8 LUT4=1 LUT6=5 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y8          FDRE                         0.000     0.000 r  register10bit/PC/Dout_reg[1]/C
+    SLICE_X40Y8          FDRE (Prop_fdre_C_Q)         0.456     0.456 r  register10bit/PC/Dout_reg[1]/Q
+                         net (fo=10, routed)          1.032     1.488    InstructionROM/address[1]
+    SLICE_X39Y7          LUT4 (Prop_lut4_I2_O)        0.124     1.612 r  InstructionROM/readData[0]_INST_0/O
+                         net (fo=23, routed)          1.368     2.980    register10bit/reg2Select[0]
+    SLICE_X34Y7          LUT6 (Prop_lut6_I4_O)        0.124     3.104 f  register10bit/DoutRs[0]_INST_0_i_2/O
+                         net (fo=1, routed)           0.000     3.104    register10bit/DoutRs[0]_INST_0_i_2_n_0
+    SLICE_X34Y7          MUXF7 (Prop_muxf7_I1_O)      0.247     3.351 f  register10bit/DoutRs[0]_INST_0/O
+                         net (fo=2, routed)           0.825     4.176    p_1_in[0]
+    SLICE_X34Y9          LUT6 (Prop_lut6_I2_O)        0.298     4.474 r  alu10bit_i_20/O
+                         net (fo=24, routed)          1.761     6.235    alu10bit/sbit0/B
+    SLICE_X36Y12         LUT2 (Prop_lut2_I0_O)        0.124     6.359 r  alu10bit/sbit0/Cout_INST_0/O
+                         net (fo=2, routed)           0.723     7.082    alu10bit/sbit1/Cin
+    SLICE_X37Y15         LUT3 (Prop_lut3_I0_O)        0.124     7.206 r  alu10bit/sbit1/Cout_INST_0/O
+                         net (fo=2, routed)           0.583     7.789    alu10bit/sbit2/Cin
+    SLICE_X37Y16         LUT3 (Prop_lut3_I0_O)        0.124     7.913 r  alu10bit/sbit2/Cout_INST_0/O
+                         net (fo=2, routed)           0.445     8.358    alu10bit/sbit3/Cin
+    SLICE_X37Y16         LUT3 (Prop_lut3_I0_O)        0.124     8.482 r  alu10bit/sbit3/Cout_INST_0/O
+                         net (fo=2, routed)           0.674     9.156    alu10bit/sbit4/Cin
+    SLICE_X38Y15         LUT3 (Prop_lut3_I0_O)        0.124     9.280 r  alu10bit/sbit4/Cout_INST_0/O
+                         net (fo=2, routed)           0.825    10.105    alu10bit/sbit5/Cin
+    SLICE_X40Y15         LUT3 (Prop_lut3_I0_O)        0.124    10.229 r  alu10bit/sbit5/Cout_INST_0/O
+                         net (fo=2, routed)           0.169    10.398    alu10bit/sbit6/Cin
+    SLICE_X40Y15         LUT3 (Prop_lut3_I0_O)        0.124    10.522 r  alu10bit/sbit6/Cout_INST_0/O
+                         net (fo=2, routed)           0.944    11.465    alu10bit/sbit7/Cin
+    SLICE_X43Y13         LUT3 (Prop_lut3_I0_O)        0.124    11.589 r  alu10bit/sbit7/Cout_INST_0/O
+                         net (fo=2, routed)           0.677    12.266    alu10bit/sbit8/Cin
+    SLICE_X43Y13         LUT3 (Prop_lut3_I0_O)        0.124    12.390 r  alu10bit/sbit8/Sum_INST_0/O
+                         net (fo=1, routed)           0.899    13.289    alu10bit/subtractionResult_8
+    SLICE_X42Y12         LUT6 (Prop_lut6_I4_O)        0.124    13.413 r  alu10bit/resultWord[8]_INST_0_i_6/O
+                         net (fo=1, routed)           0.452    13.865    alu10bit/resultWord[8]_INST_0_i_6_n_0
+    SLICE_X42Y12         LUT6 (Prop_lut6_I5_O)        0.124    13.989 r  alu10bit/resultWord[8]_INST_0/O
+                         net (fo=1, routed)           0.729    14.718    resultWord[8]
+    SLICE_X39Y10         LUT6 (Prop_lut6_I2_O)        0.124    14.842 r  register10bit_i_2/O
+                         net (fo=8, routed)           0.734    15.576    register10bit/g5/Din[8]
+    SLICE_X40Y9          FDRE                                         r  register10bit/g5/Dout_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 register10bit/PC/Dout_reg[1]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            register10bit/g1/Dout_reg[8]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        15.518ns  (logic 2.737ns (17.637%)  route 12.781ns (82.363%))
+  Logic Levels:           17  (FDRE=1 LUT2=1 LUT3=8 LUT4=1 LUT6=5 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y8          FDRE                         0.000     0.000 r  register10bit/PC/Dout_reg[1]/C
+    SLICE_X40Y8          FDRE (Prop_fdre_C_Q)         0.456     0.456 r  register10bit/PC/Dout_reg[1]/Q
+                         net (fo=10, routed)          1.032     1.488    InstructionROM/address[1]
+    SLICE_X39Y7          LUT4 (Prop_lut4_I2_O)        0.124     1.612 r  InstructionROM/readData[0]_INST_0/O
+                         net (fo=23, routed)          1.368     2.980    register10bit/reg2Select[0]
+    SLICE_X34Y7          LUT6 (Prop_lut6_I4_O)        0.124     3.104 f  register10bit/DoutRs[0]_INST_0_i_2/O
+                         net (fo=1, routed)           0.000     3.104    register10bit/DoutRs[0]_INST_0_i_2_n_0
+    SLICE_X34Y7          MUXF7 (Prop_muxf7_I1_O)      0.247     3.351 f  register10bit/DoutRs[0]_INST_0/O
+                         net (fo=2, routed)           0.825     4.176    p_1_in[0]
+    SLICE_X34Y9          LUT6 (Prop_lut6_I2_O)        0.298     4.474 r  alu10bit_i_20/O
+                         net (fo=24, routed)          1.761     6.235    alu10bit/sbit0/B
+    SLICE_X36Y12         LUT2 (Prop_lut2_I0_O)        0.124     6.359 r  alu10bit/sbit0/Cout_INST_0/O
+                         net (fo=2, routed)           0.723     7.082    alu10bit/sbit1/Cin
+    SLICE_X37Y15         LUT3 (Prop_lut3_I0_O)        0.124     7.206 r  alu10bit/sbit1/Cout_INST_0/O
+                         net (fo=2, routed)           0.583     7.789    alu10bit/sbit2/Cin
+    SLICE_X37Y16         LUT3 (Prop_lut3_I0_O)        0.124     7.913 r  alu10bit/sbit2/Cout_INST_0/O
+                         net (fo=2, routed)           0.445     8.358    alu10bit/sbit3/Cin
+    SLICE_X37Y16         LUT3 (Prop_lut3_I0_O)        0.124     8.482 r  alu10bit/sbit3/Cout_INST_0/O
+                         net (fo=2, routed)           0.674     9.156    alu10bit/sbit4/Cin
+    SLICE_X38Y15         LUT3 (Prop_lut3_I0_O)        0.124     9.280 r  alu10bit/sbit4/Cout_INST_0/O
+                         net (fo=2, routed)           0.825    10.105    alu10bit/sbit5/Cin
+    SLICE_X40Y15         LUT3 (Prop_lut3_I0_O)        0.124    10.229 r  alu10bit/sbit5/Cout_INST_0/O
+                         net (fo=2, routed)           0.169    10.398    alu10bit/sbit6/Cin
+    SLICE_X40Y15         LUT3 (Prop_lut3_I0_O)        0.124    10.522 r  alu10bit/sbit6/Cout_INST_0/O
+                         net (fo=2, routed)           0.944    11.465    alu10bit/sbit7/Cin
+    SLICE_X43Y13         LUT3 (Prop_lut3_I0_O)        0.124    11.589 r  alu10bit/sbit7/Cout_INST_0/O
+                         net (fo=2, routed)           0.677    12.266    alu10bit/sbit8/Cin
+    SLICE_X43Y13         LUT3 (Prop_lut3_I0_O)        0.124    12.390 r  alu10bit/sbit8/Sum_INST_0/O
+                         net (fo=1, routed)           0.899    13.289    alu10bit/subtractionResult_8
+    SLICE_X42Y12         LUT6 (Prop_lut6_I4_O)        0.124    13.413 r  alu10bit/resultWord[8]_INST_0_i_6/O
+                         net (fo=1, routed)           0.452    13.865    alu10bit/resultWord[8]_INST_0_i_6_n_0
+    SLICE_X42Y12         LUT6 (Prop_lut6_I5_O)        0.124    13.989 r  alu10bit/resultWord[8]_INST_0/O
+                         net (fo=1, routed)           0.729    14.718    resultWord[8]
+    SLICE_X39Y10         LUT6 (Prop_lut6_I2_O)        0.124    14.842 r  register10bit_i_2/O
+                         net (fo=8, routed)           0.676    15.518    register10bit/g1/Din[8]
+    SLICE_X39Y8          FDRE                                         r  register10bit/g1/Dout_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 register10bit/PC/Dout_reg[0]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            register10bit/PC/Dout_reg[3]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.365ns  (logic 0.186ns (50.970%)  route 0.179ns (49.030%))
+  Logic Levels:           2  (FDRE=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y8          FDRE                         0.000     0.000 r  register10bit/PC/Dout_reg[0]/C
+    SLICE_X40Y8          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  register10bit/PC/Dout_reg[0]/Q
+                         net (fo=14, routed)          0.179     0.320    CPUFetchUnit/currentPC[0]
+    SLICE_X40Y8          LUT6 (Prop_lut6_I3_O)        0.045     0.365 r  CPUFetchUnit/nextPC[3]_INST_0/O
+                         net (fo=1, routed)           0.000     0.365    register10bit/PC/Din[3]
+    SLICE_X40Y8          FDRE                                         r  register10bit/PC/Dout_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 register10bit/PC/Dout_reg[0]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            register10bit/PC/Dout_reg[2]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.381ns  (logic 0.186ns (48.828%)  route 0.195ns (51.172%))
+  Logic Levels:           2  (FDRE=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y8          FDRE                         0.000     0.000 r  register10bit/PC/Dout_reg[0]/C
+    SLICE_X40Y8          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  register10bit/PC/Dout_reg[0]/Q
+                         net (fo=14, routed)          0.195     0.336    CPUFetchUnit/currentPC[0]
+    SLICE_X40Y8          LUT5 (Prop_lut5_I2_O)        0.045     0.381 r  CPUFetchUnit/nextPC[2]_INST_0/O
+                         net (fo=1, routed)           0.000     0.381    register10bit/PC/Din[2]
+    SLICE_X40Y8          FDRE                                         r  register10bit/PC/Dout_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 register10bit/PC/Dout_reg[0]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            register10bit/PC/Dout_reg[0]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.446ns  (logic 0.186ns (41.724%)  route 0.260ns (58.276%))
+  Logic Levels:           2  (FDRE=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y8          FDRE                         0.000     0.000 r  register10bit/PC/Dout_reg[0]/C
+    SLICE_X40Y8          FDRE (Prop_fdre_C_Q)         0.141     0.141 f  register10bit/PC/Dout_reg[0]/Q
+                         net (fo=14, routed)          0.260     0.401    CPUFetchUnit/currentPC[0]
+    SLICE_X40Y8          LUT3 (Prop_lut3_I2_O)        0.045     0.446 r  CPUFetchUnit/nextPC[0]_INST_0/O
+                         net (fo=1, routed)           0.000     0.446    register10bit/PC/Din[0]
+    SLICE_X40Y8          FDRE                                         r  register10bit/PC/Dout_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 register10bit/PC/Dout_reg[0]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            register10bit/PC/Dout_reg[1]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.467ns  (logic 0.186ns (39.796%)  route 0.281ns (60.204%))
+  Logic Levels:           2  (FDRE=1 LUT4=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X40Y8          FDRE                         0.000     0.000 r  register10bit/PC/Dout_reg[0]/C
+    SLICE_X40Y8          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  register10bit/PC/Dout_reg[0]/Q
+                         net (fo=14, routed)          0.281     0.422    CPUFetchUnit/currentPC[0]
+    SLICE_X40Y8          LUT4 (Prop_lut4_I2_O)        0.045     0.467 r  CPUFetchUnit/nextPC[1]_INST_0/O
+                         net (fo=1, routed)           0.000     0.467    register10bit/PC/Din[1]
+    SLICE_X40Y8          FDRE                                         r  register10bit/PC/Dout_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 reset
+                            (input port)
+  Destination:            register10bit/g4/Dout_reg[4]/R
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.657ns  (logic 0.195ns (29.717%)  route 0.462ns (70.283%))
+  Logic Levels:           1  (IBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    P10                                               0.000     0.000 r  reset (IN)
+                         net (fo=0)                   0.000     0.000    reset
+    P10                  IBUF (Prop_ibuf_I_O)         0.195     0.195 r  reset_IBUF_inst/O
+                         net (fo=85, routed)          0.462     0.657    register10bit/g4/reset
+    SLICE_X41Y8          FDRE                                         r  register10bit/g4/Dout_reg[4]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 reset
+                            (input port)
+  Destination:            register10bit/g4/Dout_reg[5]/R
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.657ns  (logic 0.195ns (29.717%)  route 0.462ns (70.283%))
+  Logic Levels:           1  (IBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    P10                                               0.000     0.000 r  reset (IN)
+                         net (fo=0)                   0.000     0.000    reset
+    P10                  IBUF (Prop_ibuf_I_O)         0.195     0.195 r  reset_IBUF_inst/O
+                         net (fo=85, routed)          0.462     0.657    register10bit/g4/reset
+    SLICE_X41Y8          FDRE                                         r  register10bit/g4/Dout_reg[5]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 reset
+                            (input port)
+  Destination:            register10bit/g4/Dout_reg[7]/R
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.657ns  (logic 0.195ns (29.717%)  route 0.462ns (70.283%))
+  Logic Levels:           1  (IBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    P10                                               0.000     0.000 r  reset (IN)
+                         net (fo=0)                   0.000     0.000    reset
+    P10                  IBUF (Prop_ibuf_I_O)         0.195     0.195 r  reset_IBUF_inst/O
+                         net (fo=85, routed)          0.462     0.657    register10bit/g4/reset
+    SLICE_X41Y8          FDRE                                         r  register10bit/g4/Dout_reg[7]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 reset
+                            (input port)
+  Destination:            register10bit/g4/Dout_reg[8]/R
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.657ns  (logic 0.195ns (29.717%)  route 0.462ns (70.283%))
+  Logic Levels:           1  (IBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    P10                                               0.000     0.000 r  reset (IN)
+                         net (fo=0)                   0.000     0.000    reset
+    P10                  IBUF (Prop_ibuf_I_O)         0.195     0.195 r  reset_IBUF_inst/O
+                         net (fo=85, routed)          0.462     0.657    register10bit/g4/reset
+    SLICE_X41Y8          FDRE                                         r  register10bit/g4/Dout_reg[8]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 reset
+                            (input port)
+  Destination:            register10bit/g4/Dout_reg[9]/R
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.657ns  (logic 0.195ns (29.717%)  route 0.462ns (70.283%))
+  Logic Levels:           1  (IBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    P10                                               0.000     0.000 r  reset (IN)
+                         net (fo=0)                   0.000     0.000    reset
+    P10                  IBUF (Prop_ibuf_I_O)         0.195     0.195 r  reset_IBUF_inst/O
+                         net (fo=85, routed)          0.462     0.657    register10bit/g4/reset
+    SLICE_X41Y8          FDRE                                         r  register10bit/g4/Dout_reg[9]/R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 reset
+                            (input port)
+  Destination:            register10bit/PC/Dout_reg[0]/R
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.662ns  (logic 0.195ns (29.521%)  route 0.466ns (70.479%))
+  Logic Levels:           1  (IBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    P10                                               0.000     0.000 r  reset (IN)
+                         net (fo=0)                   0.000     0.000    reset
+    P10                  IBUF (Prop_ibuf_I_O)         0.195     0.195 r  reset_IBUF_inst/O
+                         net (fo=85, routed)          0.466     0.662    register10bit/PC/reset
+    SLICE_X40Y8          FDRE                                         r  register10bit/PC/Dout_reg[0]/R
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+

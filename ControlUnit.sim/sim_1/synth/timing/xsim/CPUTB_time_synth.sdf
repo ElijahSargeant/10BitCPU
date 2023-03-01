@@ -1,0 +1,139 @@
+(DELAYFILE 
+(SDFVERSION "3.0" )
+(DESIGN "ControlUnit")
+(DATE "Mon Feb 27 10:59:26 2023")
+(VENDOR "XILINX")
+(PROGRAM "Vivado")
+(VERSION "2022.2")
+(DIVIDER /)
+(TIMESCALE 1ps)
+(CELL 
+  (CELLTYPE "BUFG")
+  (INSTANCE clk_IBUF_BUFG_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (91.0:101.0:101.0) (91.0:101.0:101.0))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE clk_IBUF_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (836.2:969.8:969.8) (836.2:969.8:969.8))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "OBUF")
+  (INSTANCE done_OBUF_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (2475.3:2631.6:2631.6) (2475.3:2631.6:2631.6))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "LUT2")
+  (INSTANCE register10bit/PC/Dout\[0\]_i_1)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I1 O (100.0:124.0:124.0) (100.0:124.0:124.0))
+      (IOPATH I0 O (100.0:124.0:124.0) (100.0:124.0:124.0))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "LUT3")
+  (INSTANCE register10bit/PC/Dout\[1\]_i_1)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I2 O (100.0:124.0:124.0) (100.0:124.0:124.0))
+      (IOPATH I1 O (100.0:124.0:124.0) (100.0:124.0:124.0))
+      (IOPATH I0 O (100.0:124.0:124.0) (100.0:124.0:124.0))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "FDRE")
+  (INSTANCE register10bit/PC/Dout_reg\[0\])
+  (DELAY 
+    (ABSOLUTE 
+      (IOPATH C Q (274.0:340.0:340.0) (274.0:340.0:340.0))
+    )
+  )
+    (TIMINGCHECK
+      (SETUPHOLD (posedge CE) (posedge C) (88.0:109.0:109.0) (-9.0:-9.0:-9.0))
+      (SETUPHOLD (negedge CE) (posedge C) (88.0:109.0:109.0) (-9.0:-9.0:-9.0))
+      (SETUPHOLD (posedge D) (posedge C) (-55.0:-45.0:-45.0) (241.0:241.0:241.0))
+      (SETUPHOLD (negedge D) (posedge C) (-55.0:-45.0:-45.0) (241.0:241.0:241.0))
+      (SETUPHOLD (posedge R) (posedge C) (345.0:428.0:428.0) (-60.0:-60.0:-60.0))
+      (SETUPHOLD (negedge R) (posedge C) (345.0:428.0:428.0) (-60.0:-60.0:-60.0))
+    )
+)
+(CELL 
+  (CELLTYPE "FDRE")
+  (INSTANCE register10bit/PC/Dout_reg\[1\])
+  (DELAY 
+    (ABSOLUTE 
+      (IOPATH C Q (274.0:340.0:340.0) (274.0:340.0:340.0))
+    )
+  )
+    (TIMINGCHECK
+      (SETUPHOLD (posedge CE) (posedge C) (88.0:109.0:109.0) (-9.0:-9.0:-9.0))
+      (SETUPHOLD (negedge CE) (posedge C) (88.0:109.0:109.0) (-9.0:-9.0:-9.0))
+      (SETUPHOLD (posedge D) (posedge C) (-55.0:-45.0:-45.0) (241.0:241.0:241.0))
+      (SETUPHOLD (negedge D) (posedge C) (-55.0:-45.0:-45.0) (241.0:241.0:241.0))
+      (SETUPHOLD (posedge R) (posedge C) (345.0:428.0:428.0) (-60.0:-60.0:-60.0))
+      (SETUPHOLD (negedge R) (posedge C) (345.0:428.0:428.0) (-60.0:-60.0:-60.0))
+    )
+)
+(CELL 
+  (CELLTYPE "LUT2")
+  (INSTANCE register10bit/PC/done_OBUF_inst_i_1)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I1 O (95.0:118.0:118.0) (95.0:118.0:118.0))
+      (IOPATH I0 O (121.0:150.0:150.0) (121.0:150.0:150.0))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE reset_IBUF_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (836.2:969.8:969.8) (836.2:969.8:969.8))
+    )
+  )
+)
+(CELL 
+    (CELLTYPE "ControlUnit")
+    (INSTANCE )
+    (DELAY
+      (ABSOLUTE
+      (INTERCONNECT clk_IBUF_BUFG_inst/O register10bit/PC/Dout_reg\[0\]/C (439.0:584.0:584.0) (439.0:584.0:584.0))
+      (INTERCONNECT clk_IBUF_BUFG_inst/O register10bit/PC/Dout_reg\[1\]/C (439.0:584.0:584.0) (439.0:584.0:584.0))
+      (INTERCONNECT clk_IBUF_inst/O clk_IBUF_BUFG_inst/I (759.7:799.7:799.7) (759.7:799.7:799.7))
+      (INTERCONNECT register10bit/PC/Dout\[0\]_i_1/O register10bit/PC/Dout_reg\[0\]/D (88.0:109.0:109.0) (88.0:109.0:109.0))
+      (INTERCONNECT register10bit/PC/Dout\[1\]_i_1/O register10bit/PC/Dout_reg\[1\]/D (88.0:109.0:109.0) (88.0:109.0:109.0))
+      (INTERCONNECT register10bit/PC/Dout_reg\[0\]/Q register10bit/PC/Dout\[0\]_i_1/I0 (584.5:641.0:641.0) (584.5:641.0:641.0))
+      (INTERCONNECT register10bit/PC/Dout_reg\[0\]/Q register10bit/PC/done_OBUF_inst_i_1/I0 (584.5:641.0:641.0) (584.5:641.0:641.0))
+      (INTERCONNECT register10bit/PC/Dout_reg\[0\]/Q register10bit/PC/Dout\[1\]_i_1/I1 (584.5:641.0:641.0) (584.5:641.0:641.0))
+      (INTERCONNECT register10bit/PC/Dout_reg\[1\]/Q register10bit/PC/Dout\[1\]_i_1/I0 (842.0:912.0:912.0) (842.0:912.0:912.0))
+      (INTERCONNECT register10bit/PC/Dout_reg\[1\]/Q register10bit/PC/done_OBUF_inst_i_1/I1 (433.5:482.0:482.0) (433.5:482.0:482.0))
+      (INTERCONNECT register10bit/PC/done_OBUF_inst_i_1/O done_OBUF_inst/I (760.7:800.7:800.7) (760.7:800.7:800.7))
+      (INTERCONNECT reset_IBUF_inst/O register10bit/PC/Dout\[0\]_i_1/I1 (759.7:799.7:799.7) (759.7:799.7:799.7))
+      (INTERCONNECT reset_IBUF_inst/O register10bit/PC/Dout\[1\]_i_1/I2 (759.7:799.7:799.7) (759.7:799.7:799.7))
+      )
+    )
+)
+)

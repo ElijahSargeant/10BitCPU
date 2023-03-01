@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="CPUTB_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="CPUTB" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="4.849 ns"></ZoomStartTime>
+      <ZoomEndTime time="172.256 ns"></ZoomEndTime>
+      <Cursor1Time time="44.794 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="128"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="29" />
+   <wvobject fp_name="/CPUTB/done" type="logic">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUTB/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUTB/CPU10Bit/done" type="logic">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUTB/CPU10Bit/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUTB/CPU10Bit/instructionAddress" type="array">
+      <obj_property name="ElementShortName">instructionAddress[9:0]</obj_property>
+      <obj_property name="ObjectShortName">instructionAddress[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUTB/CPU10Bit/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUTB/CPU10Bit/resultWord" type="array">
+      <obj_property name="ElementShortName">resultWord[9:0]</obj_property>
+      <obj_property name="ObjectShortName">resultWord[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUTB/CPU10Bit/flagRegisterOutput" type="logic">
+      <obj_property name="ElementShortName">flagRegisterOutput</obj_property>
+      <obj_property name="ObjectShortName">flagRegisterOutput</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUTB/CPU10Bit/operandA" type="array">
+      <obj_property name="ElementShortName">operandA[9:0]</obj_property>
+      <obj_property name="ObjectShortName">operandA[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUTB/CPU10Bit/operandB" type="array">
+      <obj_property name="ElementShortName">operandB[9:0]</obj_property>
+      <obj_property name="ObjectShortName">operandB[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUTB/CPU10Bit/operationSelect" type="array">
+      <obj_property name="ElementShortName">operationSelect[2:0]</obj_property>
+      <obj_property name="ObjectShortName">operationSelect[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUTB/CPU10Bit/DoutRd" type="array">
+      <obj_property name="ElementShortName">DoutRd[9:0]</obj_property>
+      <obj_property name="ObjectShortName">DoutRd[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUTB/CPU10Bit/DoutRs" type="array">
+      <obj_property name="ElementShortName">DoutRs[9:0]</obj_property>
+      <obj_property name="ObjectShortName">DoutRs[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUTB/CPU10Bit/DoutCCR" type="array">
+      <obj_property name="ElementShortName">DoutCCR[9:0]</obj_property>
+      <obj_property name="ObjectShortName">DoutCCR[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUTB/CPU10Bit/Din" type="array">
+      <obj_property name="ElementShortName">Din[9:0]</obj_property>
+      <obj_property name="ObjectShortName">Din[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUTB/CPU10Bit/instruction" type="array">
+      <obj_property name="ElementShortName">instruction[9:0]</obj_property>
+      <obj_property name="ObjectShortName">instruction[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUTB/CPU10Bit/RAMWrite" type="array">
+      <obj_property name="ElementShortName">RAMWrite[9:0]</obj_property>
+      <obj_property name="ObjectShortName">RAMWrite[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUTB/CPU10Bit/RAMAddress" type="array">
+      <obj_property name="ElementShortName">RAMAddress[8:0]</obj_property>
+      <obj_property name="ObjectShortName">RAMAddress[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUTB/CPU10Bit/RAMwriteEnable" type="logic">
+      <obj_property name="ElementShortName">RAMwriteEnable</obj_property>
+      <obj_property name="ObjectShortName">RAMwriteEnable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUTB/CPU10Bit/instructionAddress" type="array">
+      <obj_property name="ElementShortName">instructionAddress[9:0]</obj_property>
+      <obj_property name="ObjectShortName">instructionAddress[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUTB/CPU10Bit/CPUFetchUnit/currentPC" type="array">
+      <obj_property name="ElementShortName">currentPC[9:0]</obj_property>
+      <obj_property name="ObjectShortName">currentPC[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUTB/CPU10Bit/CPUFetchUnit/relativeAddress" type="array">
+      <obj_property name="ElementShortName">relativeAddress[5:0]</obj_property>
+      <obj_property name="ObjectShortName">relativeAddress[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUTB/CPU10Bit/register10bit/reg1Select" type="array">
+      <obj_property name="ElementShortName">reg1Select[2:0]</obj_property>
+      <obj_property name="ObjectShortName">reg1Select[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUTB/CPU10Bit/register10bit/reg2Select" type="array">
+      <obj_property name="ElementShortName">reg2Select[2:0]</obj_property>
+      <obj_property name="ObjectShortName">reg2Select[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUTB/CPU10Bit/register10bit/Douti0" type="array">
+      <obj_property name="ElementShortName">Douti0[9:0]</obj_property>
+      <obj_property name="ObjectShortName">Douti0[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUTB/CPU10Bit/register10bit/Doutg5" type="array">
+      <obj_property name="ElementShortName">Doutg5[9:0]</obj_property>
+      <obj_property name="ObjectShortName">Doutg5[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUTB/CPU10Bit/register10bit/Doutg0" type="array">
+      <obj_property name="ElementShortName">Doutg0[9:0]</obj_property>
+      <obj_property name="ObjectShortName">Doutg0[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUTB/CPU10Bit/register10bit/Doutg1" type="array">
+      <obj_property name="ElementShortName">Doutg1[9:0]</obj_property>
+      <obj_property name="ObjectShortName">Doutg1[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPUTB/CPU10Bit/register10bit/Doutg2" type="array">
+      <obj_property name="ElementShortName">Doutg2[9:0]</obj_property>
+      <obj_property name="ObjectShortName">Doutg2[9:0]</obj_property>
+   </wvobject>
+</wave_config>

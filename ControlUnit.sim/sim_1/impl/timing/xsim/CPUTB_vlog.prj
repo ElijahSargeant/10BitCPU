@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"CPUTB_time_impl.v" \
+"../../../../../ControlUnit.srcs/sim_1/new/CPUTB.v" \
+
+# Do not sort compile order
+nosort
