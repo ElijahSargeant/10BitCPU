@@ -10,16 +10,8 @@ module StrcpyRAM(output reg [9:0] readData,
 
     initial begin
 
-        memory[0] <= 'b0001100010; // b
-        memory[1] <= 'b0001100001; // a
-        memory[2] <= 'b0000100000; // 
-        memory[3] <= 'b0001101000; // h
-        memory[4] <= 'b0001110101; // u
-        memory[5] <= 'b0001101101; // m
-        memory[6] <= 'b0001100010; // b
-        memory[7] <= 'b0001110101; // u
-        memory[8] <= 'b0001100111; // g
-        memory[9] <= 'b0000000000;
+        memory[0] <= 'b1111111111; // 
+        memory[1] <= 'b0111111110; // 
     end
      
     always@(posedge clk) begin
